@@ -1,0 +1,1 @@
+# quick-wireguard-on-aws
