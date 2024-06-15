@@ -12,6 +12,7 @@ output "connect_to_wireguard_server" {
   description = "Login to the wireguard to generate the wireguard config."
   value       = <<-EOT
                 Use the following command to login into wireguard
+                $ chmod 400 ${aws_key_pair.kp.key_name}.pem
                 $ ssh -i ${aws_key_pair.kp.key_name}.pem ubuntu@${aws_instance.wireguard.public_ip}
                 
                 Use the following command to import wireguard by QR. (Use peer 1 - 5 for multiple devices)
